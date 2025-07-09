@@ -13,12 +13,12 @@ def process_row(row, idx, columns, prompt_template, model, temperature, top_p, c
 
         result = generate_response(client, prompt, model, temperature, top_p, system_prompt)
         row_data = row.to_dict()
-        row_data['mapping'] = result
+        row_data['MODEL_OUTPUT'] = result
         return idx, row_data, None
     except Exception as e:
         error_log = f"[Row {idx}] Error: {str(e)}"
         row_data = row.to_dict()
-        row_data['mapping'] = f"ERROR: {str(e)}"
+        row_data['MODEL_OUTPUT'] = f"ERROR: {str(e)}"
         return idx, row_data, error_log
 
 def process_csv_rows(
