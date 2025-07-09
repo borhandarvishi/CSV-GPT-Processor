@@ -36,14 +36,13 @@ A modular and extensible platform to process CSV data using OpenAI GPT models, w
    pip install -r requirements.txt
 
 4. Start the backend (FastAPI)
-   ```bash
-
+```bash
 PYTHONPATH=. uvicorn backend.app:app --reload
 
 5. Start the frontend (Streamlit)
-   ```bash
+```bash
 streamlit run frontend/app.py
 
-   ```bash
+```bash
 The UI will be served at: http://localhost:8501
 
