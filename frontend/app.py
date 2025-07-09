@@ -18,7 +18,7 @@ else:
     model = st.sidebar.text_input("Enter model name manually", value="gpt-4o")
 
 with st.sidebar.expander("🔧 Advanced Parameters"):
-    temperature = st.slider("Temperature", 0.0, 1.0, 0.2, step=0.05)
+    temperature = st.slider("Temperature", 0.0, 1.0, 0.2, step=0.01)
     top_p = st.slider("Top-p", 0.0, 1.0, 0.9, step=0.01)
     num_threads = st.slider("Number of Threads", 1, 16, 6)
     system_prompt = st.text_area("System Prompt (optional)", placeholder="e.g., You are a helpful assistant...", height=100)
