@@ -38,7 +38,7 @@ if uploaded_file:
     prompt = st.text_area(
         "Use {{column_name}} syntax to reference columns in your prompt.",
         height=150,
-        placeholder="Classify this text: {{HozeFaaliat}}"
+        placeholder="Classify this text: {{column_name}}"
     )
 
     col1, col2 = st.columns([1, 1])
